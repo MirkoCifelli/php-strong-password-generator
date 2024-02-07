@@ -40,8 +40,8 @@ session_start();
                         </div>
                     </h3>
                 </div>     
-            </form>
-        </div>
+            
+        
     </main>
 
 
