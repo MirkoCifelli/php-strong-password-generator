@@ -19,27 +19,32 @@ session_start();
     <main>
         
 
-                <div>
+                <div class="container mt-2 p-4 bg-body-secondary">
                     <?php       
                         include __DIR__ ."./functions.php";
                         
-                    
                     ?>
                     <div class="text-center">
                         <h2>
                             Password Generata
-                        </h2>
-                        
+                        </h2>  
                     </div>
 
                     <div class="text-center bg-black text-white mt-3 ">
-                    <h3>
-                        <?php
-                            echo generatepassword();
-                            ?>
-                        </div>
-                    </h3>
-                </div>     
+                        <h3>
+                            <?php
+                                echo generatepassword();
+                                ?>
+                            
+                        </h3>
+                    </div>
+                </div> 
+
+                <div class="text-center mt-2 p-4 container bg-body-secondary">
+                    <a href="./index.php" class=" text-decoration-none text-black fs-4 fw-bold ">
+                        Ritorna alla home page
+                    </a>
+                </div> 
             
         
     </main>
