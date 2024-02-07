@@ -1,16 +1,4 @@
-<!-- <php?
 
-$passlenght = $_GET['pass_lenght];
-function getRandomPassword($passlenght){
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!?&%$<>^+-*/()[]{}@#_=';
-    $password = '';
-    for($i = 0; $i < $passlength; $i++){
-        $password .= $characters[rand (0, strlen($characters)- 1)];
-     }
-    return $password;
-};
-
-?> -->
 
 <!doctype html>
 <html lang="en">
@@ -25,40 +13,26 @@ function getRandomPassword($passlenght){
 
 
     <main>
-        <div class="container">
+        <div class="container bg-body-secondary p-4 mt-2">
             <h1 class="text-center mt-2 ">Php Password Generator</h1>
         </div>
 
-        <div class="container">
-            <form action="./index.php" method="get">
-                <div>
-                    <label for="input" name="pass_lenght">
+        <div class="container bg-body-secondary p-4">
+            <form action="./password.php" method="get">
+                <div class="text-center ">
+                    <label for="input" name="pass_lenght" class=" fw-bold fs-4">
                         Inserisci la lunghezza della password da generare
                     </label>
                     <input type="nunber" name="pass_lenght">
                 </div>
-                
-                <div>
-                    <button type="submit" class="btn btn-dark">
+
+                <div class="text-center my-3">
+                    <button type="submit" class="btn btn-dark m-2 fs-4">
                         Crea
                     </button>
                 </div>
 
-                <div>
-                    <?php       
-                    
-                        function generatepassword(){
-                            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!?&%$<>^+-*/()[]{}@#_=';
-                            $password = '';
-                            for($i = 0; $i < $_GET['pass_lenght']; $i++){
-                                $password .= $characters[mt_rand(0, strlen($characters)- 1)];
-                            }
-                            return $password;
-                        };
-                        var_dump(generatepassword());
-                    
-                    ?>
-                </div>     
+                      
             </form>
         </div>
     </main>
